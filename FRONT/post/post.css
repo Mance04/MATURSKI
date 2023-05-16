@@ -47,6 +47,12 @@ body .container-fluid .navbar .navbar-nav .m3 {
     font-weight: 300;
     padding: 10px;
 }
+body .container-fluid .navbar .navbar-nav .m3 button{
+    background-color: transparent;
+    border: none;
+    color: wheat;
+    padding: 0;
+   }
 
 body .container-fluid .navbar .navbar-nav .m3:hover {
     background-color: rgb(253, 61, 61);
