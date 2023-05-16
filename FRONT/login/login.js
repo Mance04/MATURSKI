@@ -59,7 +59,7 @@ async function login(){
                     }
                     else
                     {
-                        document.getElementById("invalid-feedback3").innerHTML=res.message;
+                        document.getElementById("invalid-feedback2").innerHTML=res.message;
                     }
                 }
     }
