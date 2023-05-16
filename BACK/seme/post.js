@@ -17,6 +17,11 @@ const PostSchema=new mongoose.Schema({
         trim:true,
         required:true,
     },
+    kratakopis:{
+        type:String,
+        trim:true,
+        required:true
+    },
 
     tagovi:{type:String,trim:true,required:true},
 

@@ -71,6 +71,7 @@ async function post1(req,res){
             recept:req.body.recept,
             slika:req.file.filename,
             tagovi:req.body.tagovi,
+            kratakopis:req.body.kratakopis,
 
             idKorisnika:req.body.idKorisnika,
         });
