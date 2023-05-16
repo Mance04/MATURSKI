@@ -14,7 +14,7 @@ async function registrujSE()
             let id=res.data.saved_user._id;
             console.log(id);
             localStorage.setItem("id",id);
-            location.href="../home/";
+            location.href="../index.html";
     }
     catch(err)
     {
