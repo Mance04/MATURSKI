@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     background-color: #121212 !important;
@@ -43,7 +39,7 @@ body .container-fluid .navbar .navbar-nav .m1 a {
 }
 
 body .container-fluid .navbar .navbar-nav .m3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     padding: 10px;
 }
@@ -91,7 +87,7 @@ body .container-fluid .navbar .navbar-nav .m3 a {
     gap: 15px;
 }
 
-button {
+/*button {
     height: 28px;
     width: 28px;
     display: grid;
@@ -101,7 +97,7 @@ button {
     background-color: wheat;
     outline: none;
     color: #020929;
-}
+}*/
 
 select {
     padding: 7px;
