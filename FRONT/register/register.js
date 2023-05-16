@@ -66,6 +66,7 @@ if (!t || !u || !v) {
                     if(res.uspesnost)
                     {
                         localStorage.setItem("id",res.saved_user._id)
+                        window.alert("Uspesna registracija");
                         location.href="../index.html";
                     }
                     else

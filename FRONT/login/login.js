@@ -7,6 +7,10 @@ async function login(){
         document.getElementById("invalid-feedback1").innerHTML = "";
         document.getElementById("invalid-feedback2").innerHTML = "";
 
+        let t = false;
+        let u = false;
+        let v = false;
+
         if(email==="")
             {
                 document.getElementById("invalid-feedback1").innerHTML="Niste uneli Email!!!"
@@ -26,9 +30,6 @@ async function login(){
             }
             else
             {
-                let t = false;
-                let u = false;
-                let v = false;
 
                 for (let i = 0; i < pass.length; i++) {
                     let element = pass.charCodeAt(i);
@@ -55,6 +56,7 @@ async function login(){
                     if(res.uspesnost)
                     {
                         localStorage.setItem("id",res.saved_user._id)
+                        window.alert("Uspesna prijava");
                         location.href="../index.html";
                     }
                     else
