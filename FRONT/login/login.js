@@ -48,13 +48,14 @@ async function login(){
             }
                 else
                 {
-                    let res = (await axios.post(LINK+"/api/user",{
+                    let res = (await axios.post(LINK+"/api/login",{
                         sifra:pass,
                         email:email
                     })).data;
-                    console.log(res);
+                    
                     if(res.uspesnost)
                     {
+                        console.log(res);
                         localStorage.setItem("id",res.saved_user._id)
                         window.alert("Uspesna prijava");
                         location.href="../index.html";

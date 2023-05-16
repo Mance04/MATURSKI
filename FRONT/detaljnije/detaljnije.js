@@ -45,6 +45,7 @@ async function onload(){
         document.getElementById("cont2").innerHTML=div1;
         
         let idkorisnika=localStorage.getItem("id");
+        console.log(idkorisnika);
         if(idkorisnika!==null){
             if(idkorisnika===post.idKorisnika)
             {
