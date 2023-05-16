@@ -26,7 +26,10 @@ async function onload(){
                                     <div class="details-sub">
                                         <h5>${post.imeJela}</h5>
                                     </div>
-                                    <p style="">${post.kratakopis}</p>
+                                    <p style="width: auto;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;">${post.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>
@@ -43,7 +46,10 @@ async function onload(){
                                     <div class="details-sub">
                                         <h5>${post1.imeJela}</h5>
                                     </div>
-                                    <p style="">${post1.kratakopis}</p>
+                                    <p style="width: auto;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;">${post1.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post1._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>
@@ -63,7 +69,10 @@ async function onload(){
                                     <div class="details-sub">
                                         <h5>${post2.imeJela}</h5>
                                     </div>
-                                    <p style="">${post2.kratakopis}</p>
+                                    <p style="width: auto;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;">${post2.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post2._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>
@@ -82,7 +91,10 @@ async function onload(){
                                     <div class="details-sub">
                                         <h5>${post3.imeJela}</h5>
                                     </div>
-                                    <p style="">${post3.kratakopis}</p>
+                                    <p style="width: auto;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;">${post3.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post3._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>
