@@ -14,7 +14,7 @@ async function onload(){
                                     <div class="details-sub">
                                         <h5>${post.imeJela}</h5>
                                     </div>
-                                    <p style="">${post.recept}</p>
+                                    <p style="">${post.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>

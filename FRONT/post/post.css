@@ -141,7 +141,7 @@ input[type="color"]::-moz-color-swatch {
     box-shadow: 0 0 0 2px wheat, 0 0 0 3px #020929;
 }
 
-#text-input {
+.text-input {
     color: white !important;;
     margin-top: 10px;
     border: 1px solid wheat;

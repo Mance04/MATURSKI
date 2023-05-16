@@ -22,6 +22,7 @@ async function dodajRecept(){
         formadata.append("imeJela",document.getElementById("nazivJela").value);
         formadata.append("recept",document.getElementById("text-input").innerHTML);
         formadata.append("idKorisnika",localStorage.getItem("id"));
+        formadata.append("kratakopis",document.getElementById("kratakopis").innerHTML);
         
         var res=await axios.post(LINK + "/api/post",formadata,{
             headers:{
