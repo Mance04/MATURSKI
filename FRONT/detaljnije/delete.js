@@ -6,7 +6,7 @@ async function obrisi()
         await axios.delete(idstring);
         //location.href="../index.html";
         window.history.back();
-        
+        window.alert("Uspesno ste obrisali recept")
     }
     catch(err)
     {
