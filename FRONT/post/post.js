@@ -30,6 +30,7 @@ async function dodajRecept(){
             }
         });
             console.log(res);
+            location.href="../index.html"
 
     }
     catch(err){

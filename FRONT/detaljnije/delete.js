@@ -6,6 +6,7 @@ async function obrisi()
         await axios.delete(idstring);
         //location.href="../index.html";
         window.history.back();
+        
     }
     catch(err)
     {
