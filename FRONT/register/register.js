@@ -9,7 +9,9 @@ async function registrujSE()
             let email = document.getElementById("mail").value;
             let pass = document.getElementById("password").value;
         
-        
+            document.getElementById("invalid-feedback1").innerHTML = "";
+            document.getElementById("invalid-feedback2").innerHTML = "";
+            document.getElementById("invalid-feedback3").innerHTML = "";
         
             if(ImeIPrezime==="")
             {
@@ -35,18 +37,18 @@ async function registrujSE()
             else
             {
                 let t = false;
-let u = false;
-let v = false;
+        let u = false;
+        let v = false;
 
-for (let i = 0; i < pass.length; i++) {
-  let element = pass.charCodeAt(i);
+        for (let i = 0; i < pass.length; i++) {
+            let element = pass.charCodeAt(i);
 
-  if (element >= 97 && element <= 122) {
-    t = true;
-  } else if (element >= 65 && element <= 90) {
-    u = true;
-  } else if (element >= 48 && element <= 57) {
-    v = true;
+        if (element >= 97 && element <= 122) {
+            t = true;
+        } else if (element >= 65 && element <= 90) {
+            u = true;
+        } else if (element >= 48 && element <= 57) {
+            v = true;
   }
 }
 
