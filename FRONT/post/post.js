@@ -31,6 +31,7 @@ async function dodajRecept(){
         });
             console.log(res);
             location.href="../index.html"
+            window.alert("Uspesno ste uneli recept");
 
     }
     catch(err){
