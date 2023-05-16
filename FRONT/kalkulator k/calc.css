@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b1b1b1 !important;
+    background-image: url(../pictures/Pozadina.png) !important;
+}
+
+.login {
+    width: 300px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #b1b1b1;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30px;
+    margin-top: 50px;
+    display: flex;
+    float: right;
+}
+
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.login form .form-group select {
+    border: none;
+    background-color: #b1b1b1;
+}
+.login form .form-group input{
+    border: none;
+    background-color: #b1b1b1;
+    border-bottom: 1px solid ;
+}
