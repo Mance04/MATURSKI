@@ -21,7 +21,6 @@ async function post(req,res){
     try{
         let new_user=new user({
             username:req.body.username,
-           
             email:req.body.email,
             sifra:req.body.sifra
         })
@@ -43,19 +42,17 @@ async function post(req,res){
 async function login(req,res){
     try{
         let email=req.body.email;
-        let password=req.body.password;
+        let password=req.body.sifra;
         let users=await user.find();
         let t=false;
         let p=0;
         for(let i=0;i<users.length;i++)
         {
-            if(users[i].email==email && users[i].sifra==password)
+            if(users[i].email===email && users[i].sifra===password)
             {
                 p=i;
-                t=true
-            }
-        
-           
+                t=true;
+            }  
         }
             
             if(!t)
@@ -68,8 +65,7 @@ async function login(req,res){
             else{
                 res.json({
                     uspesnost:true,
-                    id:users[p]._id
-                    
+                    id:users[p]._id,
                 })
             }
         
