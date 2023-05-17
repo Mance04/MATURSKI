@@ -11,6 +11,7 @@ async function obrisi()
     }
     catch(err)
     {
+        
         console.log(err);
     }
 }
