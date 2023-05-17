@@ -24,6 +24,7 @@ async function post(req,res){
             email:req.body.email,
             sifra:req.body.sifra
         })
+        
 
         let saved_user=await new_user.save();
         res.json({

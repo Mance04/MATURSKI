@@ -6,6 +6,7 @@ async function login(){
         document.getElementById("invalid-feedback1").innerHTML = "";
         document.getElementById("invalid-feedback2").innerHTML = "";
 
+        
         let t = false;
         let u = false;
         let v = false;

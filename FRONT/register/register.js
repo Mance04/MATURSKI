@@ -12,6 +12,24 @@ async function registrujSE()
             document.getElementById("invalid-feedback1").innerHTML = "";
             document.getElementById("invalid-feedback2").innerHTML = "";
             document.getElementById("invalid-feedback3").innerHTML = "";
+
+            let all_users= await axios.get(LINK+"/api/user");
+            let usermail=all_users.data.all_users;
+            let mail1;
+            let provera=true;
+
+            if(usermail.length > 0){
+                for(let i=0;i<usermail.length;i++)
+                {
+                    mail1=usermail[i].email;
+                    console.log(mail1);
+
+                    if(mail1.includes(email)){
+                        provera=false;
+                    }
+                }
+            }
+            
         
             if(ImeIPrezime==="")
             {
@@ -37,42 +55,48 @@ async function registrujSE()
             else
             {
                 let t = false;
-        let u = false;
-        let v = false;
+                let u = false;
+                let v = false;
 
-        for (let i = 0; i < pass.length; i++) {
-            let element = pass.charCodeAt(i);
+                for (let i = 0; i < pass.length; i++) {
+                    let element = pass.charCodeAt(i);
 
-        if (element >= 97 && element <= 122) {
-            t = true;
-        } else if (element >= 65 && element <= 90) {
-            u = true;
-        } else if (element >= 48 && element <= 57) {
-            v = true;
-  }
-}
-
-if (!t || !u || !v) {
-  document.getElementById("invalid-feedback3").innerHTML = "Šifra nije dovoljno sigurna";
-}
+                if (element >= 97 && element <= 122) {
+                    t = true;
+                } else if (element >= 65 && element <= 90) {
+                    u = true;
+                } else if (element >= 48 && element <= 57) {
+                    v = true;
+                }
+                }
+            
+                if (!t || !u || !v) {
+                document.getElementById("invalid-feedback3").innerHTML = "Šifra nije dovoljno sigurna";
+                }
                 else
                 {
-                    let res = (await axios.post(LINK+"/api/user",{
-                        username:ImeIPrezime,
-                        sifra:pass,
-                        email:email
-                    })).data;
-                    console.log(res);
-                    if(res.uspesnost)
-                    {
-                        localStorage.setItem("id",res.saved_user._id)
-                        window.alert("Uspesna registracija");
-                        location.href="../index.html";
-                    }
-                    else
-                    {
-                        document.getElementById("invalid-feedback3").innerHTML=res.message;
-                    }
+                    if(provera===true){
+                        let res = (await axios.post(LINK+"/api/user",{
+                            username:ImeIPrezime,
+                            sifra:pass,
+                            email:email
+                        })).data;
+                        console.log(res);
+                        
+                            if(res.uspesnost)
+                            {
+                                localStorage.setItem("id",res.saved_user._id)
+                                window.alert("Uspesna registracija");
+                                location.href="../index.html";
+                            }
+                            else
+                            {
+                                document.getElementById("invalid-feedback3").innerHTML=res.message;
+                            }
+                        }
+                        else{
+                            document.getElementById("invalid-feedback3").innerHTML="mail vec postoji";
+                        }    
                 }
             }
         }
