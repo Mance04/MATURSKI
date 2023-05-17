@@ -4,9 +4,10 @@ async function obrisi()
     let idstring="http://localhost:8080/api/post/"+id;
     try{
         await axios.delete(idstring);
-        //location.href="../index.html";
-        window.history.back();
+        location.href="../index.html";
         window.alert("Uspesno ste obrisali recept")
+        
+        
     }
     catch(err)
     {

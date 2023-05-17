@@ -1,8 +1,7 @@
-const LINK = "http://localhost:8080";
 
 async function login(){
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('password').value;
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('password').value;
 
         document.getElementById("invalid-feedback1").innerHTML = "";
         document.getElementById("invalid-feedback2").innerHTML = "";
@@ -49,14 +48,14 @@ async function login(){
                 else
                 {
                     let res = (await axios.post(LINK+"/api/login",{
-                        sifra:pass,
-                        email:email
+                        email:email,
+                        sifra:pass   
                     })).data;
-                    
+                    console.log(res);
                     if(res.uspesnost)
                     {
-                        console.log(res);
-                        localStorage.setItem("id",res.saved_user._id)
+                        
+                        localStorage.setItem("id",res.id)
                         window.alert("Uspesna prijava");
                         location.href="../index.html";
                     }

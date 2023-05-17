@@ -108,4 +108,5 @@ async function onload(){
     document.getElementById("rucak").innerHTML=div1;
     document.getElementById("vecera").innerHTML=div2;
     document.getElementById("desert").innerHTML=div3;
+
 }
