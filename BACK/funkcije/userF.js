@@ -60,7 +60,7 @@ async function login(req,res){
             {
             res.json({
                 uspesnost:false,
-                message:"Ne postoji korisnik sa ovim emailom"
+                message:"Neispravni podaci"
             })
             }
             else{

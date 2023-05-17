@@ -23,29 +23,6 @@ async function login(){
             {
                 document.getElementById("invalid-feedback1").innerHTML="Email nije validan!!!";
             }
-            else if(pass.length<8)
-            {
-                document.getElementById("invalid-feedback2").innerHTML="Sifra ima manje od 8 karaktera!!!";
-                
-            }
-            else
-            {
-
-                for (let i = 0; i < pass.length; i++) {
-                    let element = pass.charCodeAt(i);
-
-                if (element >= 97 && element <= 122) {
-                    t = true;
-                } else if (element >= 65 && element <= 90) {
-                    u = true;
-                } else if (element >= 48 && element <= 57) {
-                    v = true;
-                    }
-                }
-            }
-            if (!t || !u || !v) {
-            document.getElementById("invalid-feedback2").innerHTML = "Šifra nije dovoljno sigurna";
-            }
                 else
                 {
                     let res = (await axios.post(LINK+"/api/login",{
