@@ -17,7 +17,7 @@ async function onload(){
                                     <p style="width: auto;
                                     overflow: hidden;
                                     white-space: nowrap;
-                                    text-overflow: ellipsis;">${post.recept}</p>
+                                    text-overflow: ellipsis;">${post.kratakopis}</p>
                                         <a href="../detaljnije/detaljnije.html?${post._id}"><button>Detaljnije</button></a>
                                 </div>
                             </div>

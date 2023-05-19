@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+div{
+    color: wheat;
+}
 
 body {
     background-color: #121212 !important;

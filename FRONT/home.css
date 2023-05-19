@@ -120,12 +120,11 @@ body section .container-fluid h1{
 .details-sub h5{
     font-weight: 600;
     font-size: 18px;
+    color: wheat;
 }
-.price{
-    text-align: right;
-}
+
 .details p{
-    color: #6f6f6f;
+    color: wheat;
     font-size: 15px;
     line-height: 28px;
     font-weight: 400;
